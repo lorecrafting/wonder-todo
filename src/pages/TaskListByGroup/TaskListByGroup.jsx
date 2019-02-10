@@ -1,7 +1,18 @@
-import React from 'react';
+import React, { useContext } from 'react';
+import TaskList from './TaskList.jsx';
+import { AppContext } from '../../context.jsx';
 
 const TaskListByGroup = ({ groupId }) => {
-  return <div>TaskListByGroup</div>;
+  const { state } = useContext(AppContext);
+  const group = state.groups.find(group => group.group_id === Number(groupId));
+  return (
+    <div>
+      {group.name}
+      {group.tasks.map(task => (
+        <TaskList task={task} groupId={group.group_id} />
+      ))}
+    </div>
+  );
 };
 
 export default TaskListByGroup;
