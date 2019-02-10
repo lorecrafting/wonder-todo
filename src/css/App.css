@@ -22,6 +22,17 @@
   flex: 1;
 }
 
+.clickable-container {
+  display: flex;
+  align-items: center;
+  height: 5rem;
+  padding-left: 1rem;
+}
+
 .bottom-border {
   border-bottom: solid 1px #cbcbcb;
+}
+
+.pointer {
+  cursor: pointer;
 }
