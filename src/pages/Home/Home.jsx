@@ -8,7 +8,7 @@ const Home = () => {
     <div className="flex-container">
       <div className="left-flex-filler" />
       <div className="middle-flex-content">
-        <div> Things To Do</div>
+        <div className="header bottom-border"> Things To Do</div>
         <GroupList groups={state.groups} />
       </div>
       <div className="right-flex-filler" />
