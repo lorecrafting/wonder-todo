@@ -1,8 +1,8 @@
-const React from 'react';
-import GroupCard from './GroupCard.jsx'
+import React from 'react';
+import GroupCard from './GroupCard.jsx';
 
-const GroupList = ({groups}) => {
-  return groups.map(group => <GroupCard group={group} />)
-}
+const GroupList = ({ groups }) => {
+  return groups.map(group => <GroupCard group={group} />);
+};
 
-export default GroupList
+export default GroupList;

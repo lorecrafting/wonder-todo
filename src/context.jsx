@@ -1,4 +1,4 @@
-import React, { useState } from 'React';
+import React, { useState } from 'react';
 import mockData from './mockdata/mockdata.js';
 
 export const AppContext = React.createContext();
