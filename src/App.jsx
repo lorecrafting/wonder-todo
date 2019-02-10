@@ -1,4 +1,5 @@
 import React from 'react';
+import './css/App.css';
 import { Router } from '@reach/router';
 import { TodoDataProvider } from './context.jsx';
 import Home from './pages/Home/Home.jsx';

@@ -5,12 +5,14 @@ import GroupList from './GroupList.jsx';
 const Home = () => {
   const { state } = useContext(AppContext);
   return (
-    <>
-      <div>Things To Do</div>
-      <div>
+    <div className="flex-container">
+      <div className="left-flex-filler" />
+      <div className="middle-flex-content">
+        <div> Things To Do</div>
         <GroupList groups={state.groups} />
       </div>
-    </>
+      <div className="right-flex-filler" />
+    </div>
   );
 };
 
