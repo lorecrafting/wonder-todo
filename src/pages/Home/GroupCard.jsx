@@ -1,5 +1,6 @@
 import React from 'react';
 import { navigate } from '@reach/router';
+import GroupSVG from '../../assets/Group.svg';
 
 const GroupCard = ({ group }) => {
   const progressCountText = () => {
@@ -13,8 +14,13 @@ const GroupCard = ({ group }) => {
       onClick={() => navigate(`/group/${group.group_id}`)}
       key={group.group_id}
     >
-      {group.name}
-      {progressCountText(group.group_id)}
+      <div className="icon-container">
+        <img className="icon-group-arrow" src={GroupSVG} alt="group" />
+      </div>
+      <div>
+        <div className="card-title">{group.name}</div>
+        <div className="card-progress-count">{progressCountText(group.id)}</div>
+      </div>
     </div>
   );
 };

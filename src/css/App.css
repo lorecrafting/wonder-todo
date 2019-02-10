@@ -29,6 +29,29 @@
   padding-left: 1rem;
 }
 
+.card-title {
+  font-weight: bold;
+}
+
+.card-progress-count {
+  color: #cbcbcb;
+  font-weight: bold;
+  font-size: small;
+}
+
+.icon-container {
+  width: 20px;
+  height: 20px;
+  flex: 0 0 30px;
+  display: flex;
+  justify-content: center;
+  padding-right: 2rem;
+}
+
+.icon-group-arrow {
+  height: 10px;
+}
+
 .bottom-border {
   border-bottom: solid 1px #cbcbcb;
 }
