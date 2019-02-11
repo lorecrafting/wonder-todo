@@ -1,15 +1,15 @@
 import React, { useContext } from 'react';
+import Checkbox from './Checkbox.jsx';
 import { AppContext } from '../../context.jsx';
 
 const TaskCard = ({ name, taskId, groupId, completedAt, isLocked }) => {
-  const { toggleCheckbox } = useContext(AppContext);
   return (
     <div className="clickable-container bottom-border">
       <div
         className="icon-container pointer"
-        onClick={() => (!isLocked ? toggleCheckbox(groupId, taskId) : null)}
+        onClick={() => (!isLocked ? console.log('toggled') : null)}
       >
-        SVGHERE
+        <Checkbox isCompleted={completedAt} isLocked={isLocked} />
       </div>
       <div
         className="card-title"
