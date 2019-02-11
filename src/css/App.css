@@ -59,6 +59,10 @@
   height: 10px;
 }
 
+.icon-locked {
+  width: 1rem;
+}
+
 .bottom-border {
   border-bottom: solid 1px #cbcbcb;
 }
