@@ -1,10 +1,10 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import Checkbox from './Checkbox.jsx';
 import { AppContext } from '../../context.jsx';
 
 const TaskCard = ({ name, taskId, groupId, completedAt, isLocked }) => {
   const { toggleCheckbox } = useContext(AppContext);
-  console.log('taskCard gid tid', groupId, taskId);
   return (
     <div className="clickable-container bottom-border">
       <div
@@ -21,6 +21,22 @@ const TaskCard = ({ name, taskId, groupId, completedAt, isLocked }) => {
       </div>
     </div>
   );
+};
+
+TaskCard.propTypes = {
+  name: PropTypes.string,
+  taskId: PropTypes.number,
+  groupId: PropTypes.number,
+  completedAt: PropTypes.string,
+  isLocked: PropTypes.bool
+};
+
+TaskCard.defaultProps = {
+  name: null,
+  taskId: null,
+  groupId: null,
+  completedAt: null,
+  isLocked: null
 };
 
 export default TaskCard;

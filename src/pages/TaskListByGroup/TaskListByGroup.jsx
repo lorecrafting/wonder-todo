@@ -1,11 +1,13 @@
 import React, { useContext } from 'react';
+import PropTypes from 'prop-types';
 import { navigate } from '@reach/router';
 import TaskList from './TaskList.jsx';
 import { AppContext } from '../../context.jsx';
 
 const TaskListByGroup = ({ groupId }) => {
+  groupId = Number(groupId);
   const { state } = useContext(AppContext);
-  const group = state.groups.find(group => group.group_id === Number(groupId));
+  const group = state.groups.find(group => group.group_id === groupId);
   return (
     <div className="flex-container">
       <div className="left-flex-filler" />
@@ -23,6 +25,10 @@ const TaskListByGroup = ({ groupId }) => {
       <div className="right-flex-filler" />
     </div>
   );
+};
+
+TaskListByGroup.propTypes = {
+  groupId: PropTypes.string
 };
 
 export default TaskListByGroup;

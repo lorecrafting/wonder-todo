@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import TaskCard from './TaskCard.jsx';
 
 const TaskList = ({ task, groupId }) => (
@@ -11,5 +12,15 @@ const TaskList = ({ task, groupId }) => (
     isLocked={task.isLocked}
   />
 );
+
+TaskList.propTypes = {
+  task: PropTypes.object,
+  groupId: PropTypes.number
+};
+
+TaskList.defaultProps = {
+  task: {},
+  groupId: null
+};
 
 export default TaskList;

@@ -9,14 +9,11 @@ export const TodoDataProvider = ({ children }) => {
     setState(prevState => {
       const nextState = { ...prevState };
       const groupIdx = nextState.groups.findIndex(
-        group => group.group_id === Number(groupId)
+        group => group.group_id === groupId
       );
-      console.log('groupId', groupId);
-      console.log('nextState.groups', nextState.groups);
-      console.log('GroupIdx', groupIdx);
 
       const taskIdx = nextState.groups[groupIdx].tasks.findIndex(
-        task => task.task_id === Number(taskId)
+        task => task.task_id === taskId
       );
 
       const task = nextState.groups[groupIdx].tasks[taskIdx];

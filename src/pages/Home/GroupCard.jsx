@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { navigate } from '@reach/router';
 import GroupSVG from '../../assets/Group.svg';
 
@@ -23,6 +24,10 @@ const GroupCard = ({ group }) => {
       </div>
     </div>
   );
+};
+
+GroupCard.propTypes = {
+  group: PropTypes.object
 };
 
 export default GroupCard;
