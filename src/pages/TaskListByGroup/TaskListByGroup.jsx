@@ -17,7 +17,7 @@ const TaskListByGroup = ({ groupId }) => {
           </div>
         </div>
         {group.tasks.map(task => (
-          <TaskList task={task} groupId={group.groupid} />
+          <TaskList task={task} groupId={group.group_id} />
         ))}
       </div>
       <div className="right-flex-filler" />
