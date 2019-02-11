@@ -2,14 +2,14 @@ import React from 'react';
 import './css/App.css';
 import { Router } from '@reach/router';
 import { TodoDataProvider } from './context.jsx';
-import Home from './pages/Home/Home.jsx';
-import TaskListByGroup from './pages/TaskListByGroup/TaskListByGroup.jsx';
+import HomeContainer from './pages/Home/HomeContainer.jsx';
+import TaskListContainer from './pages/TaskList/TaskListContainer.jsx';
 
 const App = () => (
   <TodoDataProvider>
     <Router>
-      <Home path="/" />
-      <TaskListByGroup path="group/:groupId" />
+      <HomeContainer path="/" />
+      <TaskListContainer path="group/:groupId" />
     </Router>
   </TodoDataProvider>
 );

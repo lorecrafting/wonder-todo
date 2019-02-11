@@ -4,7 +4,7 @@ import { navigate } from '@reach/router';
 import TaskList from './TaskList.jsx';
 import { AppContext } from '../../context.jsx';
 
-const TaskListByGroup = ({ groupId }) => {
+const TaskListContainer = ({ groupId }) => {
   groupId = Number(groupId);
   const { state } = useContext(AppContext);
   const group = state.groups.find(group => group.group_id === groupId);
@@ -25,12 +25,12 @@ const TaskListByGroup = ({ groupId }) => {
   );
 };
 
-TaskListByGroup.propTypes = {
+TaskListContainer.propTypes = {
   groupId: PropTypes.string
 };
 
-TaskListByGroup.defaultProps = {
+TaskListContainer.defaultProps = {
   groupId: null
 };
 
-export default TaskListByGroup;
+export default TaskListContainer;

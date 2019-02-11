@@ -2,7 +2,7 @@ import React, { useContext } from 'react';
 import { AppContext } from '../../context.jsx';
 import GroupList from './GroupList.jsx';
 
-const Home = () => {
+const HomeContainer = () => {
   const { state } = useContext(AppContext);
   return (
     <div className="flex-container">
@@ -16,4 +16,4 @@ const Home = () => {
   );
 };
 
-export default Home;
+export default HomeContainer;
