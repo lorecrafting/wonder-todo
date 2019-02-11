@@ -21,4 +21,9 @@ Checkbox.propTypes = {
   isLocked: PropTypes.bool
 };
 
+Checkbox.defaultProps = {
+  isCompleted: false,
+  isLocked: true
+};
+
 export default Checkbox;

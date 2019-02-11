@@ -31,4 +31,8 @@ TaskListByGroup.propTypes = {
   groupId: PropTypes.string
 };
 
+TaskListByGroup.defaultProps = {
+  groupId: null
+};
+
 export default TaskListByGroup;

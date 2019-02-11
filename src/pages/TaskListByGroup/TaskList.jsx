@@ -19,7 +19,7 @@ TaskList.propTypes = {
 };
 
 TaskList.defaultProps = {
-  task: {},
+  task: null,
   groupId: null
 };
 

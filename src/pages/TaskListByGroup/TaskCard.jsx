@@ -11,7 +11,10 @@ const TaskCard = ({ name, taskId, groupId, completedAt, isLocked }) => {
         className="icon-container pointer"
         onClick={() => (!isLocked ? toggleCheckbox(groupId, taskId) : null)}
       >
-        <Checkbox isCompleted={completedAt} isLocked={isLocked} />
+        <Checkbox
+          isCompleted={completedAt ? true : false}
+          isLocked={isLocked}
+        />
       </div>
       <div
         className="card-title"

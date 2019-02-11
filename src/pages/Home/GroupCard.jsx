@@ -30,4 +30,8 @@ GroupCard.propTypes = {
   group: PropTypes.object
 };
 
+GroupCard.defaultProps = {
+  group: {}
+};
+
 export default GroupCard;

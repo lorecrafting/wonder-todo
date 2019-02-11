@@ -10,4 +10,8 @@ GroupList.propTypes = {
   groups: PropTypes.array
 };
 
+GroupList.defaultProps = {
+  groups: []
+};
+
 export default GroupList;
