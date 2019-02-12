@@ -9,8 +9,8 @@ const TaskList = ({ tasks, groupId }) =>
       key={task.task_id}
       taskId={task.task_id}
       groupId={groupId}
-      completedAt={task.completedAt}
-      isLocked={task.isLocked}
+      completedAt={task.completed_at}
+      isLocked={task.is_locked}
     />
   ));
 

@@ -6,7 +6,7 @@ import GroupSVG from '../../assets/Group.svg';
 const GroupCard = ({ group }) => {
   const progressCountText = () => {
     const totalTasksCount = group.tasks.length;
-    const tasksDoneCount = group.tasks.filter(task => task.completedAt).length;
+    const tasksDoneCount = group.tasks.filter(task => task.completed_at).length;
     return `${tasksDoneCount} OF ${totalTasksCount} TASKS COMPLETE`;
   };
   return (

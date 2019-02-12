@@ -18,30 +18,30 @@ export const TodoDataProvider = ({ children }) => {
 
       const task = nextState.groups[groupIdx].tasks[taskIdx];
 
-      if (task.completedAt) {
-        task.completedAt = null;
+      if (task.completed_at) {
+        task.completed_at = null;
       } else {
-        task.completedAt = Date();
+        task.completed_at = Date();
       }
 
       // updateDependencyLocks
       let completedTaskIdsMap = {};
       nextState.groups.forEach(group => {
         group.tasks.forEach(task => {
-          if (task.completedAt) {
+          if (task.completed_at) {
             completedTaskIdsMap[task.task_id] = true;
           }
         });
       });
       nextState.groups.forEach(group => {
         group.tasks.forEach(task => {
-          const noDependencies = task.dependencyIds.every(
+          const noDependencies = task.dependency_ids.every(
             depId => completedTaskIdsMap[depId]
           );
           if (noDependencies) {
-            task.isLocked = false;
+            task.is_locked = false;
           } else {
-            task.isLocked = true;
+            task.is_locked = true;
           }
         });
       });
