@@ -1,3 +1,5 @@
+-- Notes: archived_at fields act as a soft delete.
+
 DROP DATABASE IF EXISTS wonder_todo_dev;
 
 DROP ROLE IF EXISTS wonder_todo_dev_role;
