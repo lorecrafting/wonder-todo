@@ -36,3 +36,5 @@ Checking and unchecking a task will send a PATCH request to the server. Both suc
          }
 }
 ```
+
+[Payload json data for success and error can be found here.](https://github.com/lorecrafting/wonder-todo/blob/master/src/mockdata/mockdata.js)
